@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>แบบฟอร์มรายวิชา</h1>
+ 
+    
+    <script>
+        let subject = [];
+        function addsubj() {
+            let add = document.getElementById('sub')
+            if (add.value ===" ") {
+                alert("กรุณากรอกรายวิชา");
+            }
+            else {
+                subject.push(add.value);
+                alert("เพิ่มรายวิชา" + add.value + "เรียบร้อยแล้ว");
+                add.value = ""
+            }
+        }
+        function ShowSubj() {
+
+            let show = document.getElementById('showSubjects');
+            let select = document.createElement("select")
+            for (let i = 0; i < subject.length; i++) {
+                let option = document.createElement("option")
+                option.innerHTML = subject[i]
+                select.appendChild(option)
+            }
+            show.appendChild(select)
+            let input = document.getElementById('Disable');
+            input.disabled = true;
+            let sub = document.getElementById('add');
+            sub.disabled = true;
+            let inp = document.getElementById('ooub');
+            inp.disabled = true;
+
+        }
+
+    </script>
+    
+    <input type="text" id="sub">
+    <button id="add" onclick="addsubj()">เพิ่มรายวิชา</button>
+    <button id="Disable" onclick="ShowSubj()">แสดงรายวิชาทั้งหมด</button>
+    <div id="showSubjects">
+
+    </div>
+</body>
+
+</html>

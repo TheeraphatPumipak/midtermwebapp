@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <SCript>
+        let cars = [{
+            Make: "Toyota",
+            Model: "Camry",
+            Year: 2015
+        },
+        {
+            Make: "Honda",
+            Model: "Civic",
+            Year: 2020
+        },
+        {
+            Make: "Ford",
+            Model: "Mustang",
+            Year: 2018
+        },
+        {
+            Make: "Chevrolet",
+            Model: "Cruze",
+            Year: 2021
+        },
+        {
+            Make: "Nissan",
+            Model: "Sentra",
+            Year: 2017
+        }]
+        count = 0;
+        for (i = 0; i < cars.length; i++) {
+
+            count++
+            if (cars[i].Year >= 2020) {
+                old = " is a recent model";
+            }
+            else {
+                old = " is an older model"
+            }
+            if (cars[i].Make == "Toyota") {
+                char = " is Toyota";
+            }
+            if (cars[i].Make == "Honda") {
+                char = " is Honda";
+            }
+            else {
+                char = " is from another manufacturer";
+            }
+            console.log("car" + count + char);
+            console.log("car" + count + old);
+        }
+    </SCript>
+</body>
+
+</html>
